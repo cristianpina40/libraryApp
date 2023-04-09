@@ -18,7 +18,7 @@
         
         <div class="loginPopup">
             <div class="formPopup" id="popupForm">
-              <form  method = "get" class="formContainer">
+              <form class="formContainer" id = "fContainer">
                 <h2>Add Book</h2>
                 <label for="titleOfBook">
                   <strong>Book Title</strong>
@@ -32,7 +32,7 @@
                     <strong>Pages</strong>
                 </label>
                 <input type="text" id="bookPages" placeholder="Pages" name="newPages" required>
-                <button type="submit" class="btn">Add</button>
+                <button type="submit" class="btn" id = 'addNewBook'>Add</button>
                 <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
               </form>
             </div>
