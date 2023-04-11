@@ -23,12 +23,7 @@ function addNew(){
 
 function addBookToLibrary(){
 
-    
-
-    
-    let length = myLibrary.length;
-    
-    
+    let length = myLibrary.length; 
 
     for(let i = place; i < length; i++)
     {
@@ -77,6 +72,26 @@ function addBookToLibrary(){
 
             e.currentTarget.parentNode.remove();
           });
+
+        readButton.addEventListener('click', (e) =>{
+
+           if(e.currentTarget.style.backgroundColor === 'lightcoral')
+           {
+                e.currentTarget.style.backgroundColor = 'lightgreen';
+                e.currentTarget.textContent = 'Read'
+           }
+           else if(e.currentTarget.style.backgroundColor === 'lightgreen')
+           {
+                e.currentTarget.style.backgroundColor = 'lightcoral';
+                e.currentTarget.textContent = 'Not Read'
+           }
+           else{
+                e.currentTarget.style.backgroundColor = 'lightcoral';
+                e.currentTarget.textContent = 'Not Read'
+           }
+           
+
+        });
     }
 
     place++;

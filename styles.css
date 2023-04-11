@@ -150,4 +150,9 @@ body{
   .openButton:hover {
     opacity: 1;
   } 
+
+  #readOrNot{
+
+    background-color: lightcoral;
+  }
   
