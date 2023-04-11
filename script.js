@@ -39,7 +39,7 @@ function addBookToLibrary(){
         cardDiv.appendChild(nameDiv);
         let namePara = document.createElement('p');
         namePara.className = "bookName";
-        namePara.innerHTML = myLibrary[i].title;
+        namePara.innerHTML =  myLibrary[i].title;
         nameDiv.appendChild(namePara);
 
         let authorDiv = document.createElement('div');
@@ -55,12 +55,13 @@ function addBookToLibrary(){
         cardDiv.appendChild(pagesDiv);
         let pagesPara = document.createElement('p');
         pagesPara.className = "bookPages";
-        pagesPara.innerHTML = myLibrary[i].pages;
+        pagesPara.innerHTML =  myLibrary[i].pages;
         pagesDiv.appendChild(pagesPara);
 
         let readButton = document.createElement('button');
+        readButton.style.backgroundColor = 'lightcoral';
         readButton.textContent = 'Not Read'; 
-        readButton.id = 'readOrNot';
+        readButton.className = 'readOrNot';
         cardDiv.appendChild(readButton);
 
         let removeButton = document.createElement('button');
