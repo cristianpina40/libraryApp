@@ -33,6 +33,7 @@ function addBookToLibrary(){
     for(let i = place; i < length; i++)
     {
 
+
         let parentDiv = document.getElementById('main'); // get the parent element
         let cardDiv = document.createElement('div');
         cardDiv.className = 'card';
@@ -69,12 +70,13 @@ function addBookToLibrary(){
 
         let removeButton = document.createElement('button');
         removeButton.textContent = 'Remove'; 
-        removeButton.id = 'remove';
+        removeButton.className = 'remove';
         cardDiv.appendChild(removeButton);
 
-        console.log(myLibrary[i].title);
-        console.log(myLibrary[i].author);
-        console.log(myLibrary[i].pages);
+        removeButton.addEventListener('click', (e) =>{
+
+            e.currentTarget.parentNode.remove();
+          });
     }
 
     place++;
@@ -100,4 +102,6 @@ function openForm() {
     document.getElementById("popupForm").style.display = "none";
     document.getElementById("overlay").style.display = "none";
   }
+
+
 
